@@ -1,0 +1,23 @@
+nav ul li a:hover, nav ul li.active {
+    background-color: #ea454b;
+}
+
+.navbar {
+  margin-bottom: 1em;
+}
+
+.padding-1 {
+  padding: 1em;
+}
+
+input.ng-touched.ng-invalid {
+  border-bottom-color: #f44336;
+}
+
+.ng-touched.ng-invalid + .form-control-feedback {
+ color: #f44336;
+}
+
+.text-underline {
+  text-decoration: underline;
+}

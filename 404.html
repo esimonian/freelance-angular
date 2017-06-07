@@ -5,24 +5,29 @@
   <link rel="stylesheet" href="/assets/css/material.css">
   <link rel="stylesheet" href="/assets/css/custom.css">
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0;URL='https://esimonian.github.io/freelance-angular'"></meta>
+
   <title>FreelanceDeploy</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
-<script>
-  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
-  (function(){
-    var redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect != location.href) {
-      history.replaceState(null, null, redirect);
-    }
-  })();
-</script>
 <body>
+<!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+  <script>
+    (function () {
+      // Retrieve the URL the user was trying to access when receiving the 404.
+      var redirect = sessionStorage.redirect;
+      // Remove the URL from sessionStorage.
+      delete sessionStorage.redirect;
+      // Check if we actually need to redirect.
+      if (redirect && redirect != location.href) {
+        // We need to redirect to the URL the user was trying to access.
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
+<!-- /Github Pages hack. -->
   <app></app>
 <script type="text/javascript" src="inline.cf31fc8a7bf40c3e126a.bundle.js"></script><script type="text/javascript" src="polyfills.de8079c0f7653fcf57e9.bundle.js"></script><script type="text/javascript" src="vendor.cfe4667d588a3b30eaae.bundle.js"></script><script type="text/javascript" src="main.723a783b0d28c9caa159.bundle.js"></script></body>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

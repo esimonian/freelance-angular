@@ -2,18 +2,29 @@
 <html lang="en">
 <head>
  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="/freelance-angular/assets/css/material.css">
-  <link rel="stylesheet" href="/freelance-angular/assets/css/custom.css">
+  <link rel="stylesheet" href="/assets/css/material.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0;URL='https://USERNAME.github.io/PROJECT_NAME'"></meta>
   <title>FreelanceDeploy</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link href="/freelance-angular/styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+<link href="styles.d41d8cd98f00b204e980.bundle.css" rel="stylesheet"/></head>
+<script>
+  // See http://www.backalleycoder.com/2016/05/13/sghpa-the-single-page-app-hack-for-github-pages/
+  (function(){
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  })();
+</script>
 <body>
   <app></app>
-<script type="text/javascript" src="/freelance-angular/inline.cf31fc8a7bf40c3e126a.bundle.js"></script><script type="text/javascript" src="/freelance-angular/polyfills.de8079c0f7653fcf57e9.bundle.js"></script><script type="text/javascript" src="/freelance-angular/vendor.cfe4667d588a3b30eaae.bundle.js"></script><script type="text/javascript" src="/freelance-angular/main.723a783b0d28c9caa159.bundle.js"></script></body>
+<script type="text/javascript" src="inline.cf31fc8a7bf40c3e126a.bundle.js"></script><script type="text/javascript" src="polyfills.de8079c0f7653fcf57e9.bundle.js"></script><script type="text/javascript" src="vendor.cfe4667d588a3b30eaae.bundle.js"></script><script type="text/javascript" src="main.723a783b0d28c9caa159.bundle.js"></script></body>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
